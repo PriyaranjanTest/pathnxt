@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.pathnxt.irctcTest.verifyLoginTest"/>
+      <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest"/>
       <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest"/>
       <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest"/>
     </classes>

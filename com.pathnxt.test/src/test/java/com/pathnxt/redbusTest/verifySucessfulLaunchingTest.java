@@ -19,7 +19,7 @@ public class verifySucessfulLaunchingTest
 {
 	
 	@Test
-	public void tc_01_launchtest()
+	public void verifyredbuslaunch()
 	{
 
 		//Create an instance/Object of the browser

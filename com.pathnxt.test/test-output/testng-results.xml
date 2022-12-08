@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-09T00:22:21 IST" name="Default suite" finished-at="2022-12-09T00:22:51 IST" duration-ms="29383">
+  <suite started-at="2022-12-09T00:43:41 IST" name="Suite" finished-at="2022-12-09T00:44:49 IST" duration-ms="68525">
     <groups>
     </groups>
-    <test started-at="2022-12-09T00:22:21 IST" name="Default test" finished-at="2022-12-09T00:22:51 IST" duration-ms="29383">
-      <class name="com.pathnxt.irctcTest.verifyLoginTest">
-        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.irctcTest.verifyLoginTest@12aba8be]" started-at="2022-12-09T00:22:17 IST" name="openthebrowser" finished-at="2022-12-09T00:22:21 IST" duration-ms="4293" status="PASS">
+    <test started-at="2022-12-09T00:43:41 IST" name="Test" finished-at="2022-12-09T00:44:49 IST" duration-ms="68525">
+      <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest">
+        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.irctcTest.verifyNumberOfTrainsTest@82de64a]" started-at="2022-12-09T00:43:37 IST" name="openthebrowser" finished-at="2022-12-09T00:43:41 IST" duration-ms="3633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openthebrowser -->
-        <test-method is-config="true" signature="navigatetoapp()[pri:0, instance:com.pathnxt.irctcTest.verifyLoginTest@12aba8be]" started-at="2022-12-09T00:22:21 IST" name="navigatetoapp" finished-at="2022-12-09T00:22:38 IST" duration-ms="16716" status="PASS">
+        <test-method is-config="true" signature="navigatetoapp()[pri:0, instance:com.pathnxt.irctcTest.verifyNumberOfTrainsTest@82de64a]" started-at="2022-12-09T00:43:41 IST" name="navigatetoapp" finished-at="2022-12-09T00:44:11 IST" duration-ms="29767" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigatetoapp -->
-        <test-method signature="verifylogintest()[pri:0, instance:com.pathnxt.irctcTest.verifyLoginTest@12aba8be]" started-at="2022-12-09T00:22:38 IST" name="verifylogintest" finished-at="2022-12-09T00:22:51 IST" duration-ms="12561" status="PASS">
+        <test-method signature="verifynumberoftrains()[pri:0, instance:com.pathnxt.irctcTest.verifyNumberOfTrainsTest@82de64a]" started-at="2022-12-09T00:44:11 IST" name="verifynumberoftrains" finished-at="2022-12-09T00:44:21 IST" duration-ms="10532" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifylogintest -->
-        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.irctcTest.verifyLoginTest@12aba8be]" started-at="2022-12-09T00:22:51 IST" name="Quitbrowser" finished-at="2022-12-09T00:22:51 IST" duration-ms="515" status="PASS">
+        </test-method> <!-- verifynumberoftrains -->
+        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.irctcTest.verifyNumberOfTrainsTest@82de64a]" started-at="2022-12-09T00:44:50 IST" name="Quitbrowser" finished-at="2022-12-09T00:44:50 IST" duration-ms="564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Quitbrowser -->
-      </class> <!-- com.pathnxt.irctcTest.verifyLoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.pathnxt.irctcTest.verifyNumberOfTrainsTest -->
+      <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest">
+        <test-method signature="verifyirctclaunch()[pri:0, instance:com.pathnxt.irctcTest.verifySuccessfulLaunchTest@47d9a273]" started-at="2022-12-09T00:44:21 IST" name="verifyirctclaunch" finished-at="2022-12-09T00:44:43 IST" duration-ms="21535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyirctclaunch -->
+      </class> <!-- com.pathnxt.irctcTest.verifySuccessfulLaunchTest -->
+      <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest">
+        <test-method signature="verifyredbuslaunch()[pri:0, instance:com.pathnxt.redbusTest.verifySucessfulLaunchingTest@4b8ee4de]" started-at="2022-12-09T00:44:43 IST" name="verifyredbuslaunch" finished-at="2022-12-09T00:44:49 IST" duration-ms="6280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyredbuslaunch -->
+      </class> <!-- com.pathnxt.redbusTest.verifySucessfulLaunchingTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

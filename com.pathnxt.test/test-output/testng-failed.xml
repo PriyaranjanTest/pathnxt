@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pathnxt.irctcTest.verifyLoginTest">
+      <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest">
         <methods>
           <include name="Quitbrowser"/>
-          <include name="verifylogintest"/>
           <include name="openthebrowser"/>
+          <include name="verifylogintest"/>
           <include name="navigatetoapp"/>
         </methods>
-      </class> <!-- com.pathnxt.irctcTest.verifyLoginTest -->
+      </class> <!-- com.pathnxt.irctcTest.verifyNumberOfTrainsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

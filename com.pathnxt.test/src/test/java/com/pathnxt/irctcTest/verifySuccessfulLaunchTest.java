@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class verifySuccessfulLaunchTest 
 {
 	@Test
-public void tc_01_launchtest()
+public void verifyirctclaunch()
 {
 	//create an instance of the browser
 	WebDriverManager.chromedriver().setup();

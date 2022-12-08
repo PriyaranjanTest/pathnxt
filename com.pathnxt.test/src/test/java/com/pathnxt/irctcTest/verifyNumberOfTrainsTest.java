@@ -17,11 +17,11 @@ import com.pathnxt.commonUtilities.baseClass;
 import com.pathnxt.objectRepository.homePage;
 
 @Listeners(com.pathnxt.commonUtilities.listenersImplementation.class)
-public class verifyLoginTest extends baseClass 
+public class verifyNumberOfTrainsTest extends baseClass 
 {
 
 	@Test
-	public void verifylogintest() throws InterruptedException, EncryptedDocumentException, IOException, InvalidFormatException 
+	public void verifynumberoftrains() throws InterruptedException, EncryptedDocumentException, IOException, InvalidFormatException 
 	{
 		/**
 		 * creating object for webdriverutility class
