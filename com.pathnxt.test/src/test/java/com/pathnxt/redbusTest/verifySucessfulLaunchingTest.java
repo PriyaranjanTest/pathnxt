@@ -18,7 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class verifySucessfulLaunchingTest 
 {
 	
-	@Test
+	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
 	public void verifyredbuslaunch()
 	{
 

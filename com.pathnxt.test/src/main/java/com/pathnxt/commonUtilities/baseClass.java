@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class baseClass 
+public class baseClass  
 { 
 	
 public WebDriver driver;
@@ -24,7 +24,7 @@ public void openthebrowser()
 	driver.manage().window().maximize();
 }
 
-@BeforeTest
+//@BeforeTest
 public void navigatetoapp()
 {
 

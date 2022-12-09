@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 @Listeners(com.pathnxt.commonUtilities.listenersImplementation.class)
 public class verifySuccessfulLaunchTest 
 {
-	@Test
+	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
 public void verifyirctclaunch()
 {
 	//create an instance of the browser

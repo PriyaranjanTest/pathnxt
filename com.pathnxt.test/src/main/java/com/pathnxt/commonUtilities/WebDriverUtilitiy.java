@@ -3,8 +3,10 @@ package com.pathnxt.commonUtilities;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -112,13 +114,102 @@ public class WebDriverUtilitiy implements Iconstants
 		Select select=new Select(element);
 		select.selectByVisibleText(visible_text);
 	}
-	
+
 	public List<WebElement> getalloptions(WebElement element)
 	{
 		Select sel = new Select(element);
 		List<WebElement> list = sel.getOptions();
 		return list;
-		
+
+	}
+
+	/**
+	 * this method is used to mouseover on an element
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void mouseOverOnElement(WebDriver driver, WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).perform();
+	}
+
+	/**
+	 * this method is used to right click on element
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void rightClick(WebDriver driver, WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).perform();
+	}
+
+	/**
+	 * this method is used to doubleclick on an element
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void doubleClick(WebDriver driver, WebElement element) {
+		Actions action = new Actions(driver);
+		action.doubleClick(element).perform();
+	}
+
+	public void dragandrop(WebDriver driver,WebElement src,WebElement dst)
+	{
+		Actions action = new Actions(driver);
+		action.dragAndDrop(src, dst).perform();;
+	}
+
+	/**
+	 * this method is used to click on enter key
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void clickOnEnterKey(WebDriver driver, WebElement element) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ENTER).perform();
+	}
+
+	/**
+	 * switching to frame using index
+	 * 
+	 * @param driver
+	 * @param index
+	 */
+	public void switchToFrame(WebDriver driver, int index) {
+		driver.switchTo().frame(index);
+	}
+
+	/**
+	 * switching to frame using id
+	 * 
+	 * @param driver
+	 * @param id
+	 */
+	public void switchToFrame(WebDriver driver, String id) {
+		driver.switchTo().frame(id);
+	}
+
+	/**
+	 * switching to frame using element
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void switchToFrame(WebDriver driver, WebElement element) {
+		driver.switchTo().frame(element);
+	}
+
+	/**
+	 * switching to main frame
+	 * 
+	 * @param driver
+	 */
+	public void switchToMainFrame(WebDriver driver) {
+		driver.switchTo().defaultContent();
 	}
 
 

@@ -12,6 +12,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.pathnxt.commonUtilities.ExcelUtility;
+import com.pathnxt.commonUtilities.FileUtility;
 import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
 import com.pathnxt.objectRepository.homePage;
@@ -20,7 +21,7 @@ import com.pathnxt.objectRepository.homePage;
 public class verifyNumberOfTrainsTest extends baseClass 
 {
 
-	@Test
+	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
 	public void verifynumberoftrains() throws InterruptedException, EncryptedDocumentException, IOException, InvalidFormatException 
 	{
 		/**
@@ -37,7 +38,12 @@ public class verifyNumberOfTrainsTest extends baseClass
 		 * creating object of hompage
 		 */
 		homePage home = new homePage(driver);
-
+		
+		/**
+		 * creating object of file utility
+		 */
+		FileUtility file = new FileUtility();
+		String url=file.getPropertyKeyValue("url");
 		/**
 		 * getting required data from excel sheet
 		 */
@@ -46,6 +52,9 @@ public class verifyNumberOfTrainsTest extends baseClass
 		String CLASSES=excel.readDataFromExcel("irctc", 1, 3);
 		String QUOTA=excel.readDataFromExcel("irctc", 1, 4);
 
+		//navigate to the web application
+		driver.get(url);
+			
 		//using implicit wait
 		utility.waitForPageToLoad(driver);
 

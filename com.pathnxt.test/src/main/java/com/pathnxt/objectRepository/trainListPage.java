@@ -1,5 +1,6 @@
 package com.pathnxt.objectRepository;
 
-public class trainListPage {
+public class trainListPage 
+{
 
 }
