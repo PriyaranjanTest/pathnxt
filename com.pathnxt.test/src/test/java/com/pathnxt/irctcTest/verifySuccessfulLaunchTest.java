@@ -1,11 +1,16 @@
 package com.pathnxt.irctcTest;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.pathnxt.commonUtilities.FileUtility;
+import com.pathnxt.commonUtilities.WebDriverUtilitiy;
+import com.pathnxt.commonUtilities.baseClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 /**
@@ -14,43 +19,45 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  *
  */
 @Listeners(com.pathnxt.commonUtilities.listenersImplementation.class)
-public class verifySuccessfulLaunchTest 
+public class verifySuccessfulLaunchTest  extends baseClass
 {
 	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
-public void verifyirctclaunch()
-{
-	//create an instance of the browser
-	WebDriverManager.chromedriver().setup();
-	
-	//launching the browser
-	WebDriver driver=new ChromeDriver();
-	
-	//maximize the browser
-	driver.manage().window().maximize();
-	
-	//use the implicit wait method
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
-	
-	//navigate to the irctc web site
-	driver.get("https://www.irctc.co.in");
-	
-	//fetching the title
-	String actualtitle=driver.getTitle();
-	System.out.println(actualtitle);
-	String exptitle="IRCTC";
-	
-	//verify if the launch is successful or not
-	if(actualtitle.contains(exptitle))
+	public void verifyirctclaunch() throws IOException
 	{
-		System.out.println("Application launch is succsessful");
+
+		/**
+		 * fetching the data from .properties file
+		 */
+		FileUtility file = new FileUtility();
+		String URL=file.getPropertyKeyValue("url");
+
+		/**
+		 * creating object of webdriver utility
+		 */
+		WebDriverUtilitiy web = new WebDriverUtilitiy();
+
+		//use the implicit wait method
+		web.waitForPageToLoad(driver);
+
+		//navigate to the irctc web site
+		driver.get(URL);
+
+		//fetching the title
+		String actualtitle=driver.getTitle();
+		System.out.println(actualtitle);
+		String exptitle="IRCTC";
+
+		//verify if the launch is successful or not
+		if(actualtitle.contains(exptitle))
+		{
+			System.out.println("Application launch is succsessful");
+		}
+		else
+		{
+			System.out.println("Application launch is not successful");
+		}
+
+		
 	}
-	else
-	{
-		System.out.println("Application launch is not successful");
-	}
-	
-	//close the browser
-	driver.quit();
-}
 
 }

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTC_01Test"/>
+      <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

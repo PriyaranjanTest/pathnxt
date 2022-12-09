@@ -31,12 +31,13 @@ public class DragAndDropTest extends baseClass
 		 * creating object of webdriver utility
 		 */
 		WebDriverUtilitiy web = new WebDriverUtilitiy();
+		
+		//use implicit wait
+		web.waitForPageToLoad(driver);
 
 		//navigate to the application
 		driver.get(str);
 
-		//use implicit wait
-		web.waitForPageToLoad(driver);
 
 		//get the webelements required
 		WebElement src = jq.getDrag();

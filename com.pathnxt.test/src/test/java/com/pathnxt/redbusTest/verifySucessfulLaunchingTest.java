@@ -1,5 +1,6 @@
 package com.pathnxt.redbusTest;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -8,6 +9,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.pathnxt.commonUtilities.FileUtility;
+import com.pathnxt.commonUtilities.WebDriverUtilitiy;
+import com.pathnxt.commonUtilities.baseClass;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 /**
  * 
@@ -15,27 +20,29 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  *
  */
 @Listeners(com.pathnxt.commonUtilities.listenersImplementation.class)
-public class verifySucessfulLaunchingTest 
+public class verifySucessfulLaunchingTest extends baseClass
 {
 	
 	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
-	public void verifyredbuslaunch()
+	public void verifyredbuslaunch() throws IOException
 	{
 
-		//Create an instance/Object of the browser
-		WebDriverManager.chromedriver().setup();
+		/**
+		 * fetching the data from .properties file
+		 */
+		FileUtility file = new FileUtility();
+		String URL=file.getPropertyKeyValue("url1");
 
-		//launching the web browser
-		WebDriver driver=new ChromeDriver();
-
-		//maximize the browser
-		driver.manage().window().maximize();
+		/**
+		 * creating object of webdriver utility
+		 */
+		WebDriverUtilitiy web = new WebDriverUtilitiy();
 
 		//using the implicitly wait
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
+		web.waitForPageToLoad(driver);
 
 		//navigate to redbus web site
-		driver.get("https://www.redbus.in");
+		driver.get(URL);
 
 		//fetching the  title from the current web page
 		String actualtitle=driver.getTitle();
@@ -50,9 +57,6 @@ public class verifySucessfulLaunchingTest
 		{
 			System.out.println("Application launch failed");
 		}
-
-		//close the browser
-		driver.quit();
 
 	}
 }

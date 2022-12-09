@@ -3,7 +3,9 @@ package com.pathnxt.commonUtilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
@@ -14,7 +16,7 @@ public class baseClass
 	
 public WebDriver driver;
 
-@BeforeSuite
+@BeforeMethod
 public void openthebrowser()
 {
 
@@ -30,7 +32,7 @@ public void navigatetoapp()
 
 	driver.get("https://irctc.co.in");
 }
-@AfterSuite
+@AfterMethod
 public void Quitbrowser()
 {
 	driver.quit();

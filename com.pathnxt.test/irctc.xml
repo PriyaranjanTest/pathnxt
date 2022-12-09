@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.pathnxt.irctcTest.launchTest"/>
+      <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest"/>
+      <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
