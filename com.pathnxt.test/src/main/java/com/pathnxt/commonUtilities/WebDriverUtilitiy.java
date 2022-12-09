@@ -3,6 +3,8 @@ package com.pathnxt.commonUtilities;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -211,6 +213,31 @@ public class WebDriverUtilitiy implements Iconstants
 	public void switchToMainFrame(WebDriver driver) {
 		driver.switchTo().defaultContent();
 	}
+
+	/**
+	 * Window Scroll using java Scripts Executor
+	 */
+	public void windowscrollbypixel(WebDriver driver)
+	{
+		((JavascriptExecutor)driver).executeScript("window.scrollBy(0,7000)");
+	}
+
+	/**
+	 * Window Scroll using java Scripts Executor
+	 */
+	public void windowscrolltopageheight(WebDriver driver)
+	{
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+
+	// it will go down till the object specified.
+	public void scrolltillobjectfound(WebDriver driver,String element)
+	{
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(element)));
+	}
+
+
+
 
 
 }

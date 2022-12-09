@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest">
+      <class name="com.pathnxt.redbusTest.calculateTotaBusesTest">
         <methods>
-          <include name="verifyirctclaunch"/>
+          <include name="openthebrowser"/>
+          <include name="calculatebuses"/>
         </methods>
-      </class> <!-- com.pathnxt.irctcTest.verifySuccessfulLaunchTest -->
+      </class> <!-- com.pathnxt.redbusTest.calculateTotaBusesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

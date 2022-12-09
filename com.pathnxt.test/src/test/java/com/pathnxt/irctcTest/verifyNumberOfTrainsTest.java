@@ -15,7 +15,7 @@ import com.pathnxt.commonUtilities.ExcelUtility;
 import com.pathnxt.commonUtilities.FileUtility;
 import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
-import com.pathnxt.objectRepository.homePage;
+import com.pathnxt.objectRepository.IrctchomePage;
 
 @Listeners(com.pathnxt.commonUtilities.listenersImplementation.class)
 public class verifyNumberOfTrainsTest extends baseClass 
@@ -37,7 +37,7 @@ public class verifyNumberOfTrainsTest extends baseClass
 		/**
 		 * creating object of hompage
 		 */
-		homePage home = new homePage(driver);
+		IrctchomePage home = new IrctchomePage(driver);
 		
 		/**
 		 * creating object of file utility

@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
  * @author -Priyaranjan Mohanty-
  *
  */
-public class homePage
+public class IrctchomePage
 {
 	//initialization
-	public homePage(WebDriver driver)
+	public IrctchomePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
