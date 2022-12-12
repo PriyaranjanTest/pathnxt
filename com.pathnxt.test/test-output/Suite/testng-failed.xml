@@ -3,6 +3,41 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.pathnxt.jquery.DragAndDropTest">
+        <methods>
+          <include name="Quitbrowser"/>
+          <include name="openthebrowser"/>
+          <include name="draganddrop"/>
+        </methods>
+      </class> <!-- com.pathnxt.jquery.DragAndDropTest -->
+      <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest">
+        <methods>
+          <include name="Quitbrowser"/>
+          <include name="openthebrowser"/>
+          <include name="verifyredbuslaunch"/>
+        </methods>
+      </class> <!-- com.pathnxt.redbusTest.verifySucessfulLaunchingTest -->
+      <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest">
+        <methods>
+          <include name="verifynumberoftrains"/>
+          <include name="Quitbrowser"/>
+          <include name="openthebrowser"/>
+        </methods>
+      </class> <!-- com.pathnxt.irctcTest.verifyNumberOfTrainsTest -->
+      <class name="com.pathnxt.hyrtutorials.WindowHandleTest">
+        <methods>
+          <include name="windowhandle"/>
+          <include name="Quitbrowser"/>
+          <include name="openthebrowser"/>
+        </methods>
+      </class> <!-- com.pathnxt.hyrtutorials.WindowHandleTest -->
+      <class name="com.pathnxt.redbusTest.calculateTotaBusesTest">
+        <methods>
+          <include name="Quitbrowser"/>
+          <include name="openthebrowser"/>
+          <include name="calculatebuses"/>
+        </methods>
+      </class> <!-- com.pathnxt.redbusTest.calculateTotaBusesTest -->
       <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest">
         <methods>
           <include name="Quitbrowser"/>

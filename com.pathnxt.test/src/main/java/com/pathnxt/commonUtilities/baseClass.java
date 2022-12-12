@@ -32,7 +32,7 @@ public void navigatetoapp()
 
 	driver.get("https://irctc.co.in");
 }
-//@AfterMethod
+@AfterMethod
 public void Quitbrowser()
 {
 	driver.quit();

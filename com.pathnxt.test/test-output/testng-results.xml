@@ -1,21 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-09T21:31:34 IST" name="Default suite" finished-at="2022-12-09T21:31:47 IST" duration-ms="12195">
+  <suite started-at="2022-12-12T12:38:47 IST" name="Suite" finished-at="2022-12-12T12:39:56 IST" duration-ms="68245">
     <groups>
     </groups>
-    <test started-at="2022-12-09T21:31:34 IST" name="Default test" finished-at="2022-12-09T21:31:47 IST" duration-ms="12195">
+    <test started-at="2022-12-12T12:38:47 IST" name="Test" finished-at="2022-12-12T12:39:56 IST" duration-ms="68245">
       <class name="com.pathnxt.redbusTest.calculateTotaBusesTest">
-        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.redbusTest.calculateTotaBusesTest@5d7148e2]" started-at="2022-12-09T21:31:35 IST" name="openthebrowser" finished-at="2022-12-09T21:31:39 IST" duration-ms="3629" status="PASS">
+        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.redbusTest.calculateTotaBusesTest@26e356f0]" started-at="2022-12-12T12:39:27 IST" name="openthebrowser" finished-at="2022-12-12T12:39:28 IST" duration-ms="1224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openthebrowser -->
-        <test-method signature="calculatebuses()[pri:0, instance:com.pathnxt.redbusTest.calculateTotaBusesTest@5d7148e2]" started-at="2022-12-09T21:31:39 IST" name="calculatebuses" finished-at="2022-12-09T21:31:47 IST" duration-ms="8044" status="PASS">
+        <test-method signature="calculatebuses()[pri:0, instance:com.pathnxt.redbusTest.calculateTotaBusesTest@26e356f0]" started-at="2022-12-12T12:39:28 IST" name="calculatebuses" finished-at="2022-12-12T12:39:34 IST" duration-ms="6736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calculatebuses -->
+        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.redbusTest.calculateTotaBusesTest@26e356f0]" started-at="2022-12-12T12:39:34 IST" name="Quitbrowser" finished-at="2022-12-12T12:39:35 IST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quitbrowser -->
       </class> <!-- com.pathnxt.redbusTest.calculateTotaBusesTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.pathnxt.jquery.DragAndDropTest">
+        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.jquery.DragAndDropTest@47d9a273]" started-at="2022-12-12T12:39:35 IST" name="openthebrowser" finished-at="2022-12-12T12:39:36 IST" duration-ms="1157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openthebrowser -->
+        <test-method signature="draganddrop()[pri:0, instance:com.pathnxt.jquery.DragAndDropTest@47d9a273]" started-at="2022-12-12T12:39:36 IST" name="draganddrop" finished-at="2022-12-12T12:39:40 IST" duration-ms="4355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- draganddrop -->
+        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.jquery.DragAndDropTest@47d9a273]" started-at="2022-12-12T12:39:40 IST" name="Quitbrowser" finished-at="2022-12-12T12:39:41 IST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quitbrowser -->
+      </class> <!-- com.pathnxt.jquery.DragAndDropTest -->
+      <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest">
+        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.irctcTest.verifyNumberOfTrainsTest@4f2b503c]" started-at="2022-12-12T12:38:48 IST" name="openthebrowser" finished-at="2022-12-12T12:38:51 IST" duration-ms="3570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openthebrowser -->
+        <test-method signature="verifynumberoftrains()[pri:0, instance:com.pathnxt.irctcTest.verifyNumberOfTrainsTest@4f2b503c]" started-at="2022-12-12T12:38:51 IST" name="verifynumberoftrains" finished-at="2022-12-12T12:39:11 IST" duration-ms="19102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifynumberoftrains -->
+        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.irctcTest.verifyNumberOfTrainsTest@4f2b503c]" started-at="2022-12-12T12:39:11 IST" name="Quitbrowser" finished-at="2022-12-12T12:39:11 IST" duration-ms="391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quitbrowser -->
+      </class> <!-- com.pathnxt.irctcTest.verifyNumberOfTrainsTest -->
+      <class name="com.pathnxt.hyrtutorials.WindowHandleTest">
+        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.hyrtutorials.WindowHandleTest@54a7079e]" started-at="2022-12-12T12:39:11 IST" name="openthebrowser" finished-at="2022-12-12T12:39:12 IST" duration-ms="1308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openthebrowser -->
+        <test-method signature="windowhandle()[pri:0, instance:com.pathnxt.hyrtutorials.WindowHandleTest@54a7079e]" started-at="2022-12-12T12:39:12 IST" name="windowhandle" finished-at="2022-12-12T12:39:26 IST" duration-ms="13833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- windowhandle -->
+        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.hyrtutorials.WindowHandleTest@54a7079e]" started-at="2022-12-12T12:39:26 IST" name="Quitbrowser" finished-at="2022-12-12T12:39:27 IST" duration-ms="391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quitbrowser -->
+      </class> <!-- com.pathnxt.hyrtutorials.WindowHandleTest -->
+      <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest">
+        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.redbusTest.verifySucessfulLaunchingTest@27f981c6]" started-at="2022-12-12T12:39:50 IST" name="openthebrowser" finished-at="2022-12-12T12:39:51 IST" duration-ms="1121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openthebrowser -->
+        <test-method signature="verifyredbuslaunch()[pri:0, instance:com.pathnxt.redbusTest.verifySucessfulLaunchingTest@27f981c6]" started-at="2022-12-12T12:39:51 IST" name="verifyredbuslaunch" finished-at="2022-12-12T12:39:55 IST" duration-ms="4088" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyredbuslaunch -->
+        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.redbusTest.verifySucessfulLaunchingTest@27f981c6]" started-at="2022-12-12T12:39:55 IST" name="Quitbrowser" finished-at="2022-12-12T12:39:56 IST" duration-ms="311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quitbrowser -->
+      </class> <!-- com.pathnxt.redbusTest.verifySucessfulLaunchingTest -->
+      <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest">
+        <test-method is-config="true" signature="openthebrowser()[pri:0, instance:com.pathnxt.irctcTest.verifySuccessfulLaunchTest@4b8ee4de]" started-at="2022-12-12T12:39:41 IST" name="openthebrowser" finished-at="2022-12-12T12:39:42 IST" duration-ms="1132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openthebrowser -->
+        <test-method signature="verifyirctclaunch()[pri:0, instance:com.pathnxt.irctcTest.verifySuccessfulLaunchTest@4b8ee4de]" started-at="2022-12-12T12:39:42 IST" name="verifyirctclaunch" finished-at="2022-12-12T12:39:50 IST" duration-ms="7996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyirctclaunch -->
+        <test-method is-config="true" signature="Quitbrowser()[pri:0, instance:com.pathnxt.irctcTest.verifySuccessfulLaunchTest@4b8ee4de]" started-at="2022-12-12T12:39:50 IST" name="Quitbrowser" finished-at="2022-12-12T12:39:50 IST" duration-ms="396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quitbrowser -->
+      </class> <!-- com.pathnxt.irctcTest.verifySuccessfulLaunchTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

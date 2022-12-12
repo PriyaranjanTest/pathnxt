@@ -1,7 +1,9 @@
 package com.pathnxt.commonUtilities;
 
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 /**
@@ -85,6 +88,42 @@ public class WebDriverUtilitiy implements Iconstants
 	{
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(Iconstants.explicitWaitDuration));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	/**
+	 * here we can change the polling time from default 500ms to any polling time
+	 * @param driver
+	 * @param pollingTime
+	 * @param element
+	 */
+	public void waitForElementToCustom(WebDriver driver,int pollingTime,WebElement element)
+	{
+		FluentWait<WebDriver> wait=new FluentWait<WebDriver>(driver);
+		wait.pollingEvery(Duration.ofSeconds(pollingTime));
+		wait.ignoring(Exception.class);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	/**
+	 * here we are giving custom timeout
+	 * @param element
+	 * @throws InterruptedException
+	 */
+	public void waitAndClick(WebElement element)
+	{
+		int count=0;
+		while(count<10)
+		{
+			try {
+				element.click();
+			} catch (Exception e) {
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}
+				count++;
+			}
+		}
 	}
 	/**
 	 * it is used switch to select dropdown by using index
@@ -234,6 +273,46 @@ public class WebDriverUtilitiy implements Iconstants
 	public void scrolltillobjectfound(WebDriver driver,String element)
 	{
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(element)));
+	}
+
+	/**
+	 * this method is used to switch to window using title
+	 * @param driver
+	 * @param actualTitle
+	 */
+	public void switchTowindow(WebDriver driver,String actualTitle)
+	{
+		Set<String> set = driver.getWindowHandles();
+		for (String string : set)
+		{
+			driver.switchTo().window(string);
+			String title = driver.getTitle();
+			if(title.contains(actualTitle))
+			{
+				break;
+			}
+		}
+	}
+
+	/**
+	 * this method is used to switch to window by using URL
+	 * @param actualURL
+	 * @param driver
+	 */
+	public void switchToWindow(String actualURL,WebDriver driver)
+	{
+		Set<String> set = driver.getWindowHandles();
+		Iterator<String> it = set.iterator();
+		while(it.hasNext())
+		{
+			String wId = it.next();
+			driver.switchTo().window(wId);
+			String url = driver.getCurrentUrl();
+			if(url.contains(actualURL))
+			{
+				break;
+			}
+		}
 	}
 
 
