@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.pathnxt.redbusTest.calculateTotaBusesTest" class="method navigator-link" hash-for-method="calculatebuses">calculatebuses</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">9 methods,   9 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,6 +102,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.pathnxt.redbusTest.calculateTotaBusesTest" class="method navigator-link" hash-for-method="calculatebuses">calculatebuses</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.pathnxt.jquery.DragAndDropTest" class="method navigator-link" hash-for-method="draganddrop">draganddrop</a> <!-- method navigator-link -->
@@ -168,60 +159,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.pathnxt.redbusTest.calculateTotaBusesTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="calculatebuses">
-                  </a> <!-- calculatebuses -->
-                  <span class="method-name">calculatebuses</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@class=&quot;close-primo&quot;]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.pathnxt.commonUtilities.WebDriverUtilitiy.waitForElemenetToBeClickable(WebDriverUtilitiy.java:91)
-	at com.pathnxt.redbusTest.calculateTotaBusesTest.calculatebuses(calculateTotaBusesTest.java:107)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&quot;close-primo&quot;]&quot;}
-  (Session info: chrome=108.0.5359.99)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
-System info: host: &apos;PRIYARANJAN&apos;, ip: &apos;192.168.47.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1fa35fc75d9105b2871b9794ee409ca0, findElement {using=xpath, value=//div[@class=&quot;close-primo&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\-hp-\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64923}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64923/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1fa35fc75d9105b2871b9794ee409ca0
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:660)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-	... 28 more
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -255,21 +192,6 @@ Session ID: 1fa35fc75d9105b2871b9794ee409ca0
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.pathnxt.irctcTest.verifyNumberOfTrainsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifynumberoftrains">
-                  </a> <!-- verifynumberoftrains -->
-                  <span class="method-name">verifynumberoftrains</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">com.pathnxt.hyrtutorials.MulitpleTabsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -285,6 +207,21 @@ Session ID: 1fa35fc75d9105b2871b9794ee409ca0
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">com.pathnxt.irctcTest.verifyNumberOfTrainsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifynumberoftrains">
+                  </a> <!-- verifynumberoftrains -->
+                  <span class="method-name">verifynumberoftrains</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">com.pathnxt.hyrtutorials.WindowHandleTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -293,6 +230,21 @@ Session ID: 1fa35fc75d9105b2871b9794ee409ca0
                   <a name="windowhandle">
                   </a> <!-- windowhandle -->
                   <span class="method-name">windowhandle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pathnxt.redbusTest.calculateTotaBusesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="calculatebuses">
+                  </a> <!-- calculatebuses -->
+                  <span class="method-name">calculatebuses</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -404,46 +356,46 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'multiplewindowhandle')
-data.setCell(0, 2, 'com.pathnxt.hyrtutorials.MultipleWindowsTest')
-data.setCell(0, 3, 37714);
+data.setCell(0, 1, 'verifynumberoftrains')
+data.setCell(0, 2, 'com.pathnxt.irctcTest.verifyNumberOfTrainsTest')
+data.setCell(0, 3, 17253);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'multipletabs')
-data.setCell(1, 2, 'com.pathnxt.hyrtutorials.MulitpleTabsTest')
-data.setCell(1, 3, 36143);
+data.setCell(1, 1, 'multiplewindowhandle')
+data.setCell(1, 2, 'com.pathnxt.hyrtutorials.MultipleWindowsTest')
+data.setCell(1, 3, 16864);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'windowhandle')
-data.setCell(2, 2, 'com.pathnxt.hyrtutorials.WindowHandleTest')
-data.setCell(2, 3, 33563);
+data.setCell(2, 1, 'multipletabs')
+data.setCell(2, 2, 'com.pathnxt.hyrtutorials.MulitpleTabsTest')
+data.setCell(2, 3, 16441);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'handletab')
-data.setCell(3, 2, 'com.pathnxt.hyrtutorials.HandleNewTabTest')
-data.setCell(3, 3, 33127);
+data.setCell(3, 1, 'windowhandle')
+data.setCell(3, 2, 'com.pathnxt.hyrtutorials.WindowHandleTest')
+data.setCell(3, 3, 13852);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'calculatebuses')
-data.setCell(4, 2, 'com.pathnxt.redbusTest.calculateTotaBusesTest')
-data.setCell(4, 3, 26116);
+data.setCell(4, 1, 'handletab')
+data.setCell(4, 2, 'com.pathnxt.hyrtutorials.HandleNewTabTest')
+data.setCell(4, 3, 12732);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifynumberoftrains')
-data.setCell(5, 2, 'com.pathnxt.irctcTest.verifyNumberOfTrainsTest')
-data.setCell(5, 3, 18027);
+data.setCell(5, 1, 'calculatebuses')
+data.setCell(5, 2, 'com.pathnxt.redbusTest.calculateTotaBusesTest')
+data.setCell(5, 3, 9421);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyirctclaunch')
-data.setCell(6, 2, 'com.pathnxt.irctcTest.verifySuccessfulLaunchTest')
-data.setCell(6, 3, 8842);
+data.setCell(6, 1, 'draganddrop')
+data.setCell(6, 2, 'com.pathnxt.jquery.DragAndDropTest')
+data.setCell(6, 3, 3874);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'draganddrop')
-data.setCell(7, 2, 'com.pathnxt.jquery.DragAndDropTest')
-data.setCell(7, 3, 3706);
+data.setCell(7, 1, 'verifyredbuslaunch')
+data.setCell(7, 2, 'com.pathnxt.redbusTest.verifySucessfulLaunchingTest')
+data.setCell(7, 3, 2931);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyredbuslaunch')
-data.setCell(8, 2, 'com.pathnxt.redbusTest.verifySucessfulLaunchingTest')
-data.setCell(8, 3, 2368);
+data.setCell(8, 1, 'verifyirctclaunch')
+data.setCell(8, 2, 'com.pathnxt.irctcTest.verifySuccessfulLaunchTest')
+data.setCell(8, 3, 648);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -476,133 +428,131 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifynumberoftrains</span>
-                <span class="method-start">3360 ms</span>
+                <span class="method-start">3487 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">21402 ms</span>
+                <span class="method-start">20770 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.hyrtutorials.WindowHandleTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">21851 ms</span>
+                <span class="method-start">21218 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">windowhandle</span>
-                <span class="method-start">23099 ms</span>
+                <span class="method-start">22428 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">56664 ms</span>
+                <span class="method-start">36286 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.redbusTest.calculateTotaBusesTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">57101 ms</span>
+                <span class="method-start">36666 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">calculatebuses</span>
-                <span class="method-start">58251 ms</span>
+                <span class="method-start">37849 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">84378 ms</span>
+                <span class="method-start">47271 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.jquery.DragAndDropTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">84625 ms</span>
+                <span class="method-start">48494 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">draganddrop</span>
-                <span class="method-start">85900 ms</span>
+                <span class="method-start">49912 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">89607 ms</span>
+                <span class="method-start">53788 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.hyrtutorials.HandleNewTabTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">89867 ms</span>
+                <span class="method-start">54146 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">handletab</span>
-                <span class="method-start">91032 ms</span>
+                <span class="method-start">55440 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">124161 ms</span>
+                <span class="method-start">68177 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.hyrtutorials.MulitpleTabsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">124611 ms</span>
+                <span class="method-start">68754 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">multipletabs</span>
-                <span class="method-start">125756 ms</span>
+                <span class="method-start">69905 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">161900 ms</span>
+                <span class="method-start">86350 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.hyrtutorials.MultipleWindowsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">162341 ms</span>
+                <span class="method-start">86896 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">multiplewindowhandle</span>
-                <span class="method-start">163540 ms</span>
+                <span class="method-start">88140 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">201262 ms</span>
+                <span class="method-start">105010 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.irctcTest.verifySuccessfulLaunchTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">201832 ms</span>
+                <span class="method-start">105373 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyirctclaunch</span>
-                <span class="method-start">203050 ms</span>
+                <span class="method-start">106580 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">211896 ms</span>
+                <span class="method-start">107230 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.pathnxt.redbusTest.verifySucessfulLaunchingTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">openthebrowser</span>
-                <span class="method-start">212288 ms</span>
+                <span class="method-start">107481 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyredbuslaunch</span>
-                <span class="method-start">213426 ms</span>
+                <span class="method-start">108602 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Quitbrowser</span>
-                <span class="method-start">215796 ms</span>
+                <span class="method-start">111535 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
