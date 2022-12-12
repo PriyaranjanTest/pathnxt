@@ -7,6 +7,8 @@
       <class name="com.pathnxt.hyrtutorials.WindowHandleTest"/>
       <class name="com.pathnxt.redbusTest.calculateTotaBusesTest"/>
       <class name="com.pathnxt.jquery.DragAndDropTest"/>
+      <class name="com.pathnxt.hyrtutorials.HandleNewTabTest"/>
+      <class name="com.pathnxt.hyrtutorials.MultipleWindowsTest"/>
       <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest"/>
       <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest"/>
     </classes>

@@ -4,6 +4,8 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.pathnxt.hyrtutorials.WindowHandleTest"/>
+      <class name="com.pathnxt.hyrtutorials.HandleNewTabTest"/>
+      <class name="com.pathnxt.hyrtutorials.MultipleWindowsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

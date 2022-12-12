@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -313,6 +314,39 @@ public class WebDriverUtilitiy implements Iconstants
 				break;
 			}
 		}
+	}
+	
+	/**
+	 * This method is used to switch alert popUp and accept the popup
+	 * @param driver
+	 * @param expectedMsg
+	 */
+	public void switchToAlertPopUpAndAccept(WebDriver driver,String expectedMsg)
+	{
+		Alert alert = driver.switchTo().alert();
+		if(alert.getText().trim().equalsIgnoreCase(expectedMsg.trim()))
+		{
+			System.out.println("alert msg is verified");
+		}else {
+			System.out.println("alert msg is not verified");
+		}
+		alert.accept();
+	}
+	/**
+	 * this method is used to switch to alert popUp and dismiss
+	 * @param expectedMsg
+	 * @param driver
+	 */
+	public void switchToAlertPopUpAndDismiss(String expectedMsg,WebDriver driver)
+	{
+		Alert alert = driver.switchTo().alert();
+		if(alert.getText().trim().equalsIgnoreCase(expectedMsg))
+		{
+			System.out.println("alert msg is verified");
+		}else {
+			System.out.println("alert msg is not verified");
+		}
+		alert.dismiss();
 	}
 
 

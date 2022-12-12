@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pathnxt.hyrtutorials.WindowHandleTest">
+      <class name="com.pathnxt.hyrtutorials.MultipleWindowsTest">
         <methods>
-          <include name="windowhandle"/>
+          <include name="Quitbrowser"/>
           <include name="openthebrowser"/>
+          <include name="multiplewindowhandle"/>
         </methods>
-      </class> <!-- com.pathnxt.hyrtutorials.WindowHandleTest -->
+      </class> <!-- com.pathnxt.hyrtutorials.MultipleWindowsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

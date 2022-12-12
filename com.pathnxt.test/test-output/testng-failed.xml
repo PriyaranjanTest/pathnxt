@@ -1,50 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pathnxt.jquery.DragAndDropTest">
+      <class name="com.pathnxt.hyrtutorials.MultipleWindowsTest">
         <methods>
           <include name="Quitbrowser"/>
           <include name="openthebrowser"/>
-          <include name="draganddrop"/>
+          <include name="multiplewindowhandle"/>
         </methods>
-      </class> <!-- com.pathnxt.jquery.DragAndDropTest -->
-      <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest">
-        <methods>
-          <include name="Quitbrowser"/>
-          <include name="openthebrowser"/>
-          <include name="verifyredbuslaunch"/>
-        </methods>
-      </class> <!-- com.pathnxt.redbusTest.verifySucessfulLaunchingTest -->
-      <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest">
-        <methods>
-          <include name="verifynumberoftrains"/>
-          <include name="Quitbrowser"/>
-          <include name="openthebrowser"/>
-        </methods>
-      </class> <!-- com.pathnxt.irctcTest.verifyNumberOfTrainsTest -->
-      <class name="com.pathnxt.hyrtutorials.WindowHandleTest">
-        <methods>
-          <include name="windowhandle"/>
-          <include name="Quitbrowser"/>
-          <include name="openthebrowser"/>
-        </methods>
-      </class> <!-- com.pathnxt.hyrtutorials.WindowHandleTest -->
-      <class name="com.pathnxt.redbusTest.calculateTotaBusesTest">
-        <methods>
-          <include name="Quitbrowser"/>
-          <include name="openthebrowser"/>
-          <include name="calculatebuses"/>
-        </methods>
-      </class> <!-- com.pathnxt.redbusTest.calculateTotaBusesTest -->
-      <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest">
-        <methods>
-          <include name="Quitbrowser"/>
-          <include name="openthebrowser"/>
-          <include name="verifyirctclaunch"/>
-        </methods>
-      </class> <!-- com.pathnxt.irctcTest.verifySuccessfulLaunchTest -->
+      </class> <!-- com.pathnxt.hyrtutorials.MultipleWindowsTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

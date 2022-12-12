@@ -23,9 +23,15 @@ public class HyrHomePage
 
 	@FindBy(xpath = "//button[@id=\"newWindowBtn\"]")
 	private WebElement windowbutton;
-	
+
 	@FindBy(xpath = "//input[@id=\"name\"]")
 	private WebElement textfield;
+
+	@FindBy(xpath = "//button[@id=\"newTabBtn\"]")
+	private WebElement newtab;
+	
+	@FindBy(xpath = "//button[@id=\"newWindowsBtn\"]")
+	private WebElement windows;
 
 	//utilization
 
@@ -43,6 +49,14 @@ public class HyrHomePage
 
 	public WebElement getTextfield() {
 		return textfield;
+	}
+
+	public WebElement getNewtab() {
+		return newtab;
+	}
+
+	public WebElement getWindows() {
+		return windows;
 	}
 
 
