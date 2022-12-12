@@ -2,8 +2,11 @@ package com.pathnxt.hyrtutorials;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.Test;
 
+import com.pathnxt.commonUtilities.ExcelUtility;
 import com.pathnxt.commonUtilities.FileUtility;
 import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
@@ -13,8 +16,14 @@ import com.pathnxt.objectRepository.NewTabPage;
 public class HandleNewTabTest extends baseClass
 {
 	@Test
-	public void handletab() throws IOException
+	public void handletab() throws IOException, EncryptedDocumentException, InvalidFormatException
 	{
+		/**
+		 * creating object of excel utility class
+		 */
+		ExcelUtility excel = new ExcelUtility();
+		
+		
 		/**
 		 * creating object of pom class
 		 */
@@ -34,7 +43,7 @@ public class HandleNewTabTest extends baseClass
 		 * creating object of properties file for fetching the data
 		 */
 		FileUtility file = new FileUtility();
-		String URL=file.getPropertyKeyValue("url3");
+		String URL=file.getPropertyKeyValue(excel.readDataFromExcel("tab", 1, 0));
 
 		//use implicit wait
 		web.waitForPageToLoad(driver);
@@ -51,27 +60,23 @@ public class HandleNewTabTest extends baseClass
 		//click on new tab button
 		home.getNewtab().click();
 		
-		//fetch the title of parent window/tab
-		String parent = driver.getTitle();
-		
-		//fetch the title of the tab
-		String tab="AlertsDemo - H Y R Tutorials";
-		
 		//switch to new tab
-		web.switchTowindow(driver, tab);
+		web.switchTowindow(driver, excel.readDataFromExcel("tab", 1, 2));
 		
 		//perform the operation on the tab
 		tabpage.getAlert().click();
 		
-		//handle the alert poppup
-		String alert="I am an alert box!";
-		web.switchToAlertPopUpAndAccept(driver, alert);
+		//handle the alert poppup;
+		web.switchToAlertPopUpAndAccept(driver, excel.readDataFromExcel("tab", 1, 4));
 		
 		//switch to the parent tab
-		web.switchTowindow(driver, parent);
+		web.switchTowindow(driver, excel.readDataFromExcel("tab", 1, 1));
 		
 		//perform operation on the parent tab
 		home.getTextfield().sendKeys("hii");
+		
+		//result message
+		System.out.println(excel.readDataFromExcel("tab", 1, 3));
 		
 
 	}

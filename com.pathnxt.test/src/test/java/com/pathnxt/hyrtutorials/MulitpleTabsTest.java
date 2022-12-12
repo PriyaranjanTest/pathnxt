@@ -2,9 +2,12 @@ package com.pathnxt.hyrtutorials;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.pathnxt.commonUtilities.ExcelUtility;
 import com.pathnxt.commonUtilities.FileUtility;
 import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
@@ -17,8 +20,14 @@ import com.pathnxt.objectRepository.NewTabPage;
 public class MulitpleTabsTest extends baseClass
 {
 	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
-	public void multipletabs() throws IOException
+	public void multipletabs() throws IOException, EncryptedDocumentException, InvalidFormatException
 	{
+
+		/**
+		 * creating object of excel utility class
+		 */
+		ExcelUtility excel = new ExcelUtility();
+
 		/**
 		 * creating object of pom class
 		 */
@@ -43,14 +52,12 @@ public class MulitpleTabsTest extends baseClass
 		 * creating object of properties file for fetching the data
 		 */
 		FileUtility file = new FileUtility();
-		String URL=file.getPropertyKeyValue("url3");
-
 
 		//use implicit wait
 		web.waitForPageToLoad(driver);
 
 		//navigate to application
-		driver.get(URL);
+		driver.get(file.getPropertyKeyValue(excel.readDataFromExcel("tab", 1, 0)));
 
 		//mouse over on element
 		web.mouseOverOnElement(driver, home.getPratice());
@@ -61,36 +68,28 @@ public class MulitpleTabsTest extends baseClass
 		//click on the multiple tab button
 		home.getMultitabs().click();
 
-		//fetch the parent tab title
-		String parent=driver.getTitle();
-
-		//fetch child tabs title
-		String newtab="AlertsDemo - H Y R Tutorials";
-		String childtab1="Basic Controls - H Y R Tutorials";
-
 		//switch to new tab
-		web.switchTowindow(driver, newtab);
+		web.switchTowindow(driver, excel.readDataFromExcel("tab", 1, 2));
 
 		//perform operation on that tab
 		tabpage.getAlert().click();
 
 		//handle the popup
-		String alertmsg="I am an alert box!";
-		web.switchToAlertPopUpAndAccept(driver, alertmsg);
+		web.switchToAlertPopUpAndAccept(driver, excel.readDataFromExcel("tab", 1, 4));
 
 		//switch to another tab
-		web.switchTowindow(driver, childtab1);
+		web.switchTowindow(driver, excel.readDataFromExcel("tab", 3, 2));
 
 		//perform operation in the tab
-		childtab.getFrstnametextfield().sendKeys("Hello!");
+		childtab.getFrstnametextfield().sendKeys(excel.readDataFromExcel("tab", 3, 4));
 
 		//switch to parent tab
-		web.switchTowindow(driver, parent);
+		web.switchTowindow(driver, excel.readDataFromExcel("tab", 1, 1));
 
 		//perform action on the parent tab
-		home.getTextfield().sendKeys("This is parent tab");
+		home.getTextfield().sendKeys(excel.readDataFromExcel("tab", 1, 5));
 
 		//result message
-		System.out.println("test case passed");
+		System.out.println(excel.readDataFromExcel("tab", 1, 3));
 	}
 }

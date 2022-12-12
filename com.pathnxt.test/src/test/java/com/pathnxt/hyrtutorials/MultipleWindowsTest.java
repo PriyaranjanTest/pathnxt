@@ -2,9 +2,12 @@ package com.pathnxt.hyrtutorials;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.pathnxt.commonUtilities.ExcelUtility;
 import com.pathnxt.commonUtilities.FileUtility;
 import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
@@ -16,8 +19,14 @@ import com.pathnxt.objectRepository.HyrNewWindow;
 public class MultipleWindowsTest extends baseClass
 {
 	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
-	public void multiplewindowhandle() throws IOException
+	public void multiplewindowhandle() throws IOException, EncryptedDocumentException, InvalidFormatException
 	{
+
+		/**
+		 * creating object of excel utility class
+		 */
+		ExcelUtility excel = new ExcelUtility();
+
 		/**
 		 * creating object of pom class
 		 */
@@ -42,14 +51,12 @@ public class MultipleWindowsTest extends baseClass
 		 * creating object of properties file for fetching the data
 		 */
 		FileUtility file = new FileUtility();
-		String URL=file.getPropertyKeyValue("url3");
-
 
 		//use implicit wait
 		web.waitForPageToLoad(driver);
 
 		//navigate to application
-		driver.get(URL);
+		driver.get(file.getPropertyKeyValue(excel.readDataFromExcel("window", 1, 5)));
 
 		//mouse over on element
 		web.mouseOverOnElement(driver, home.getPratice());
@@ -60,40 +67,33 @@ public class MultipleWindowsTest extends baseClass
 		//clck on the multiple window button
 		home.getWindows().click();
 
-		//fetch the parent window title
-		String parent = driver.getTitle();
-
-		//fetch the title of child windows
-		String child="XPath Practice - H Y R Tutorials";
-		String child1="Basic Controls - H Y R Tutorials";
-
 		//switch to windows by title
-		web.switchTowindow(driver, child);
+		web.switchTowindow(driver, excel.readDataFromExcel("window", 2, 0));
 
 		//perform operation on child windows
-		childwindow.getFirstname().sendKeys("priyaranjan");
+		childwindow.getFirstname().sendKeys(excel.readDataFromExcel("window", 1, 2));
 
 		//switch back to the parent window
-		web.switchTowindow(driver, parent);
+		web.switchTowindow(driver, excel.readDataFromExcel("window", 1, 1));
 
 		//perform operation on the parent window
-		home.getTextfield().sendKeys("hii");
+		home.getTextfield().sendKeys(excel.readDataFromExcel("window", 1, 3));
 
 		//switch to child1 windows
-		web.switchTowindow(driver, child1);
+		web.switchTowindow(driver, excel.readDataFromExcel("window", 1, 0));
 
 		//perform operation on the child1 windows
-		child1window.getFirstname().sendKeys("priyaranjan");
+		child1window.getFirstname().sendKeys(excel.readDataFromExcel("window", 2, 2));
 
 		//switch to the parent frame
-		web.switchTowindow(driver, parent);
+		web.switchTowindow(driver, excel.readDataFromExcel("window", 1, 1));
 
 		//perform some operation again on the parent window
 		home.getTextfield().clear();
-		home.getTextfield().sendKeys("bye");
+		home.getTextfield().sendKeys(excel.readDataFromExcel("window", 1, 3));
 
 		//Result message
-		System.out.println("test case passed");
+		System.out.println(excel.readDataFromExcel("window", 1, 4));
 
 	}
 }

@@ -2,9 +2,12 @@ package com.pathnxt.hyrtutorials;
 
 import java.io.IOException;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.pathnxt.commonUtilities.ExcelUtility;
 import com.pathnxt.commonUtilities.FileUtility;
 import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
@@ -21,9 +24,13 @@ import com.pathnxt.objectRepository.HyrNewWindow;
 public class WindowHandleTest extends baseClass
 {
 	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
-	public void windowhandle() throws IOException
+	public void windowhandle() throws IOException, EncryptedDocumentException, InvalidFormatException
 	{
-
+		/**
+		 * creating object of excel utility class
+		 */
+		ExcelUtility excel = new ExcelUtility();
+		
 		/**
 		 * creating object of pom class
 		 */
@@ -43,7 +50,7 @@ public class WindowHandleTest extends baseClass
 		 * creating object of properties file for fetching the data
 		 */
 		FileUtility file = new FileUtility();
-		String URL=file.getPropertyKeyValue("url3");
+		String URL=file.getPropertyKeyValue(excel.readDataFromExcel("window", 1, 5));
 
 
 		//use implicit wait
@@ -60,30 +67,22 @@ public class WindowHandleTest extends baseClass
 
 		//perform window handle operation
 		home.getWindowbutton().click();
-		
-		//fetch the title
-		String parent = driver.getTitle();
 
-		//switch to child window
-		String tilte="Basic Controls";
-		web.switchTowindow(driver, tilte);
+		//switch to child window;
+		web.switchTowindow(driver, excel.readDataFromExcel("window", 1, 0));
 
 		//perform operation on the child windows
-		window.getFirstname().sendKeys("hello");
-		
-		//fetch the child window title
-		String child = driver.getTitle();
+		window.getFirstname().sendKeys(excel.readDataFromExcel("window", 1, 2));
 
 		//switch to parent window
-		web.switchTowindow(driver, parent);
+		web.switchTowindow(driver, excel.readDataFromExcel("window", 1, 1));
 
 		//perform operation on the parent window
-		home.getTextfield().sendKeys("hii");
+		home.getTextfield().sendKeys(excel.readDataFromExcel("window", 1, 3));
 
 		//confirmation message
-		System.out.println("test case passed");
-		System.out.println(parent);
-		System.err.println(child);
+		System.out.println(excel.readDataFromExcel("window", 1, 4));
+		
 
 	}
 }
