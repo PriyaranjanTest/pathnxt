@@ -32,6 +32,9 @@ public class HyrHomePage
 	
 	@FindBy(xpath = "//button[@id=\"newWindowsBtn\"]")
 	private WebElement windows;
+    
+	@FindBy(xpath = "//button[@id=\"newTabsBtn\"]")
+	private WebElement multitabs;
 
 	//utilization
 
@@ -57,6 +60,10 @@ public class HyrHomePage
 
 	public WebElement getWindows() {
 		return windows;
+	}
+
+	public WebElement getMultitabs() {
+		return multitabs;
 	}
 
 

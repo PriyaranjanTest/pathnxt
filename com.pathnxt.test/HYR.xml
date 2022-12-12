@@ -5,6 +5,7 @@
     <classes>
       <class name="com.pathnxt.hyrtutorials.WindowHandleTest"/>
       <class name="com.pathnxt.hyrtutorials.HandleNewTabTest"/>
+      <class name="com.pathnxt.hyrtutorials.MulitpleTabsTest"/>
       <class name="com.pathnxt.hyrtutorials.MultipleWindowsTest"/>
     </classes>
   </test> <!-- Test -->
