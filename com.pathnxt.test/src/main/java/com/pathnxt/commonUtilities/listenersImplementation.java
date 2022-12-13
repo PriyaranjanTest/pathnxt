@@ -1,5 +1,12 @@
 package com.pathnxt.commonUtilities;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -14,7 +21,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
  * @author -Priyaranjan Mohanty-
  *
  */
-public class listenersImplementation  implements ITestListener
+public class listenersImplementation  implements ITestListener 
 {
 	ExtentReports report;
 	ExtentTest test;
@@ -38,6 +45,22 @@ public class listenersImplementation  implements ITestListener
 	{
 		test.log(Status.FAIL,result.getMethod().getMethodName());
 		test.log(Status.FAIL, result.getThrowable());
+
+		String testName= result.getMethod().getMethodName();
+		System.out.println("---------------i am ilstrening------------");
+		TakesScreenshot screenshot=(TakesScreenshot)baseClass.driver;
+		File src = screenshot.getScreenshotAs(OutputType.FILE);
+		LocalDateTime localDateTime = LocalDateTime.now();
+		String dateTime= localDateTime.toString().replace(" ", "_").replace(":","_");
+		File dst = new File("screenshots/"+"_"+testName+"-"+dateTime+".PNG");
+		try {
+			FileUtils.copyFile(src, dst);
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+			System.out.println("problem in saving screenshot"+e.getMessage());
+		}
 
 	}
 

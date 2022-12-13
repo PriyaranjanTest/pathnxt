@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pathnxt.hyrtutorials.MulitpleTabsTest">
+      <class name="com.pathnxt.internethero.FileDownloadTest">
         <methods>
-          <include name="Quitbrowser"/>
+          <include name="download"/>
           <include name="openthebrowser"/>
-          <include name="multipletabs"/>
         </methods>
-      </class> <!-- com.pathnxt.hyrtutorials.MulitpleTabsTest -->
+      </class> <!-- com.pathnxt.internethero.FileDownloadTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

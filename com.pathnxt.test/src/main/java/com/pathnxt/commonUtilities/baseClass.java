@@ -10,7 +10,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class baseClass  
 { 
 
-	public WebDriver driver;
+	public static  WebDriver driver;
 
 	@BeforeMethod
 	public void openthebrowser()

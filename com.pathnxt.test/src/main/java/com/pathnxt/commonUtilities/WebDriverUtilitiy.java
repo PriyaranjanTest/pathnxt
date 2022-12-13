@@ -1,5 +1,10 @@
 package com.pathnxt.commonUtilities;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
@@ -315,7 +320,7 @@ public class WebDriverUtilitiy implements Iconstants
 			}
 		}
 	}
-	
+
 	/**
 	 * This method is used to switch alert popUp and accept the popup
 	 * @param driver
@@ -349,6 +354,71 @@ public class WebDriverUtilitiy implements Iconstants
 		alert.dismiss();
 	}
 
+	/**
+	 * Robot class for enter keyboard operation
+	 * @throws AWTException 
+	 */
+	public void robotenter() throws AWTException
+	{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
+
+	/**
+	 * robot class for tab keyboard operation
+	 * @throws AWTException 
+	 */
+	public void robottab() throws AWTException
+	{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+	}
+
+	/**
+	 * robot class for control keyboard operation
+	 * @throws AWTException 
+	 */
+	public void robotcontrol() throws AWTException
+	{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+	}
+
+	/**
+	 * robot class for tab keyboard operation
+	 * @throws AWTException 
+	 */
+	public void robotV() throws AWTException
+	{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+	}
+
+	/**
+	 * robot class for contro + v keyboard operation
+	 * @throws AWTException 
+	 */
+	public void controlv() throws AWTException
+	{
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+	}
+
+	/**
+	 * String selection class for internally copy the file path
+	 */
+	public void stringselection(String filepath)
+	{
+		StringSelection strings = new StringSelection(filepath);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(strings, null);
+	}
 
 
 
