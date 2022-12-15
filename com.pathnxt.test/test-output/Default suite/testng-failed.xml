@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pathnxt.internethero.FileDownloadTest">
+      <class name="com.pathnxt.demoqa.HandleSliderTest">
         <methods>
-          <include name="download"/>
+          <include name="slider"/>
           <include name="openthebrowser"/>
         </methods>
-      </class> <!-- com.pathnxt.internethero.FileDownloadTest -->
+      </class> <!-- com.pathnxt.demoqa.HandleSliderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -221,6 +221,29 @@ public class WebDriverUtilitiy implements Iconstants
 	}
 
 	/**
+	 * this method is used to click on right arrow key key
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void clickOnRightArrowKey(WebDriver driver, WebElement element) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ARROW_RIGHT).perform();
+	}
+
+	/**
+	 * this method is used to click on left arrow key key
+	 * 
+	 * @param driver
+	 * @param element
+	 */
+	public void clickOnLeftArrowKey(WebDriver driver, WebElement element) {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ARROW_LEFT).perform();
+	}
+
+
+	/**
 	 * switching to frame using index
 	 * 
 	 * @param driver

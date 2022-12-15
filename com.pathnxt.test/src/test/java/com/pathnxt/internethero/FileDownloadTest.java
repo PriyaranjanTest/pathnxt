@@ -56,7 +56,7 @@ public class FileDownloadTest extends baseClass
 		int count=0;
 		for(WebElement list:ele)
 		{
-			if(list.getText().contains("sample.pdf"))
+			if(list.getText().equalsIgnoreCase("readdata3.xlsx"))
 			{
 				if(list.getText().contains("chromedriver"))
 				{
@@ -81,6 +81,7 @@ public class FileDownloadTest extends baseClass
 				break;
 			}
 		}
+		System.out.println(ele.get(0).getText());
 
 	}
 }
