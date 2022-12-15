@@ -35,6 +35,12 @@ public class HyrHomePage
     
 	@FindBy(xpath = "//button[@id=\"newTabsBtn\"]")
 	private WebElement multitabs;
+	
+	@FindBy(xpath = "//a[.=\"Calendars Practice\"]")
+	private WebElement calenderPratice;
+	
+	@FindBy(xpath = "//a[.=\"Dropdowns\"]")
+	private WebElement Dropdowns;
 
 	//utilization
 
@@ -64,6 +70,14 @@ public class HyrHomePage
 
 	public WebElement getMultitabs() {
 		return multitabs;
+	}
+
+	public WebElement getCalenderPratice() {
+		return calenderPratice;
+	}
+
+	public WebElement getDropdowns() {
+		return Dropdowns;
 	}
 
 

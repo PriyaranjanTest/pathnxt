@@ -3,6 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
+      <class name="com.pathnxt.hyrtutorials.DropDownTest"/>
+      <class name="com.pathnxt.hyrtutorials.DatePickerTest"/>
       <class name="com.pathnxt.hyrtutorials.HandleNewTabTest"/>
       <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest"/>
       <class name="com.pathnxt.demoqa.FetchingDataFromTableTest"/>
