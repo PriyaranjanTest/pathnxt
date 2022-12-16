@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pathnxt.hyrtutorials.DropDownTest">
+      <class name="com.pathnxt.irctcTest.FetchTheLowestFairedTrainTest">
         <methods>
-          <include name="dropsown"/>
           <include name="openthebrowser"/>
+          <include name="lowestfairtrain"/>
         </methods>
-      </class> <!-- com.pathnxt.hyrtutorials.DropDownTest -->
+      </class> <!-- com.pathnxt.irctcTest.FetchTheLowestFairedTrainTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

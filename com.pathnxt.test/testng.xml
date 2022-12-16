@@ -13,11 +13,13 @@
       <class name="com.pathnxt.hyrtutorials.WindowHandleTest"/>
       <class name="com.pathnxt.redbusTest.calculateTotaBusesTest"/>
       <class name="com.pathnxt.demoqa.HandleSliderTest"/>
+      <class name="com.pathnxt.irctcTest.VerifyTrainShceduleTest"/>
       <class name="com.pathnxt.internethero.FileUploadTest"/>
       <class name="com.pathnxt.internethero.FileDownloadTest"/>
       <class name="com.pathnxt.hyrtutorials.MulitpleTabsTest"/>
       <class name="com.pathnxt.hyrtutorials.MultipleWindowsTest"/>
       <class name="com.pathnxt.irctcTest.verifySuccessfulLaunchTest"/>
+      <class name="com.pathnxt.irctcTest.FetchTheLowestFairedTrainTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

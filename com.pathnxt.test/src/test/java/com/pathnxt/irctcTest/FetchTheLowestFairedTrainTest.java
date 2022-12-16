@@ -1,14 +1,12 @@
 package com.pathnxt.irctcTest;
 
 import java.io.IOException;
-
 import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.pathnxt.commonUtilities.ExcelUtility;
@@ -17,12 +15,10 @@ import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
 import com.pathnxt.objectRepository.IrctchomePage;
 
-@Listeners(com.pathnxt.commonUtilities.listenersImplementation.class)
-public class verifyNumberOfTrainsTest extends baseClass 
+public class FetchTheLowestFairedTrainTest extends baseClass
 {
-
-	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
-	public void verifynumberoftrains() throws InterruptedException, EncryptedDocumentException, IOException, InvalidFormatException 
+	@Test
+	public void lowestfairtrain() throws EncryptedDocumentException, InvalidFormatException, IOException
 	{
 		/**
 		 * creating object for webdriverutility class
@@ -38,7 +34,7 @@ public class verifyNumberOfTrainsTest extends baseClass
 		 * creating object of hompage
 		 */
 		IrctchomePage home = new IrctchomePage(driver);
-		
+
 		/**
 		 * creating object of file utility
 		 */
@@ -54,7 +50,7 @@ public class verifyNumberOfTrainsTest extends baseClass
 
 		//navigate to the web application
 		driver.get(url);
-			
+
 		//using implicit wait
 		utility.waitForPageToLoad(driver);
 
@@ -123,15 +119,16 @@ public class verifyNumberOfTrainsTest extends baseClass
 		}
 		driver.findElement(By.xpath("//span[.=\"OK\"]")).click();
 
-		//clic on the search button
+		//click on the search button
 		driver.findElement(By.xpath("//button[.=\"Search\"]")).click();
-
-		//fetching the total number of trains
-		List<WebElement> trains = driver.findElements(By.xpath("//div[@class=\"form-group no-pad col-xs-12 bull-back border-all\"]"));
 		
-		//displaying the total number of trains on the console
-		System.out.println("Total "+trains.size()+" trains are found running betwwen bhubaneswar and bengaluru");
-
-
+		//click on the all the train's 3AC link
+		List<WebElement> trains = driver.findElements(By.xpath("//div[@class=\"form-group no-pad col-xs-12 bull-back border-all\"]//tr/td//strong[.=\"AC 3 Tier (3A)\"]"));
+		for(WebElement ele:trains)
+		{
+			ele.click();
+		}
+		
+		//not completed
 	}
 }

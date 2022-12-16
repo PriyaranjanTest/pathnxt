@@ -62,6 +62,12 @@ public class IrctchomePage
 
 	@FindBy(xpath = "//div[@class=\"form-group no-pad col-xs-12 bull-back border-all\"]")
 	private WebElement trainList;
+	
+	@FindBy(xpath = "(//strong[.=\"TRAINS\"])[1]")
+	private WebElement trains;
+	
+	@FindBy(xpath = "//span[.=\"Train Schedule\"]")
+	private WebElement trainshedule;
 
 	//utilization
 
@@ -123,6 +129,14 @@ public class IrctchomePage
 
 	public WebElement getTrainList() {
 		return trainList;
+	}
+
+	public WebElement getTrains() {
+		return trains;
+	}
+
+	public WebElement getTrainshedule() {
+		return trainshedule;
 	}
 
 
