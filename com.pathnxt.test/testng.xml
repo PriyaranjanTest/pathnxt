@@ -6,6 +6,7 @@
       <class name="com.pathnxt.hyrtutorials.DropDownTest"/>
       <class name="com.pathnxt.hyrtutorials.DatePickerTest"/>
       <class name="com.pathnxt.hyrtutorials.HandleNewTabTest"/>
+      <class name="com.pathnxt.dataprovider.LoginUsingDataproviderTest"/>
       <class name="com.pathnxt.redbusTest.verifySucessfulLaunchingTest"/>
       <class name="com.pathnxt.demoqa.FetchingDataFromTableTest"/>
       <class name="com.pathnxt.irctcTest.verifyNumberOfTrainsTest"/>

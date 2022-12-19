@@ -9,8 +9,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class baseClass  
 { 
-
+	/**
+	 * creating object of required commonutilities and declare them as public
+	 */
 	public static  WebDriver driver;
+	public ExcelUtility excel=new ExcelUtility();
+	public WebDriverUtilitiy web = new WebDriverUtilitiy();
+	public FileUtility file = new FileUtility();
 
 	@BeforeMethod
 	public void openthebrowser()
