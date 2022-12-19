@@ -5,6 +5,7 @@
     <classes>
       <class name="com.pathnxt.irctcTest.FetchTheLowestFairedTrainTest">
         <methods>
+          <include name="Quitbrowser"/>
           <include name="openthebrowser"/>
           <include name="lowestfairtrain"/>
         </methods>
