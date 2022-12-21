@@ -18,7 +18,7 @@ import com.pathnxt.objectRepository.IrctchomePage;
 public class FetchTheLowestFairedTrainTest extends baseClass
 {
 	@Test
-	public void lowestfairtrain() throws EncryptedDocumentException, InvalidFormatException, IOException
+	public void lowestfairtrain() throws EncryptedDocumentException, InvalidFormatException, IOException, InterruptedException
 	{
 		/**
 		 * creating object for webdriverutility class
@@ -88,7 +88,7 @@ public class FetchTheLowestFairedTrainTest extends baseClass
 
 		//enetr the DATE of journey
 		driver.findElement(By.xpath("//span[@class=\"ng-tns-c58-10 ui-calendar\"]")).click();
-		driver.findElement(By.xpath("//span[.=\"December\"]/../../..//tr[5]/td[6]")).click();
+		driver.findElement(By.xpath("//table[@class=\"ui-datepicker-calendar ng-tns-c58-10\"]/tbody/tr[5]/td[6]")).click();
 
 		//select ALL CLASSES dropdown
 		WebElement allclasses = driver.findElement(By.xpath("//div[@class=\"ui-dropdown-label-container ng-tns-c65-11\"]"));
@@ -121,14 +121,16 @@ public class FetchTheLowestFairedTrainTest extends baseClass
 
 		//click on the search button
 		driver.findElement(By.xpath("//button[.=\"Search\"]")).click();
-		
+
 		//click on the all the train's 3AC link
 		List<WebElement> trains = driver.findElements(By.xpath("//div[@class=\"form-group no-pad col-xs-12 bull-back border-all\"]//tr/td//strong[.=\"AC 3 Tier (3A)\"]"));
 		for(WebElement ele:trains)
 		{
 			ele.click();
+			Thread.sleep(30000);
 		}
 		
+
 		//not completed
 	}
 }
