@@ -17,10 +17,22 @@ import com.pathnxt.commonUtilities.WebDriverUtilitiy;
 import com.pathnxt.commonUtilities.baseClass;
 import com.pathnxt.objectRepository.IrctchomePage;
 
+/**
+ * 
+ * @author -Priyaranjan-
+ *
+ */
 @Listeners(com.pathnxt.commonUtilities.listenersImplementation.class)
 public class verifyNumberOfTrainsTest extends baseClass 
 {
 
+	/**
+	 * 
+	 * @throws InterruptedException
+	 * @throws EncryptedDocumentException
+	 * @throws IOException
+	 * @throws InvalidFormatException
+	 */
 	@Test(retryAnalyzer = com.pathnxt.commonUtilities.RetryAnalyzerImptn.class)
 	public void verifynumberoftrains() throws InterruptedException, EncryptedDocumentException, IOException, InvalidFormatException 
 	{
@@ -38,7 +50,7 @@ public class verifyNumberOfTrainsTest extends baseClass
 		 * creating object of hompage
 		 */
 		IrctchomePage home = new IrctchomePage(driver);
-		
+
 		/**
 		 * creating object of file utility
 		 */
@@ -54,7 +66,7 @@ public class verifyNumberOfTrainsTest extends baseClass
 
 		//navigate to the web application
 		driver.get(url);
-			
+
 		//using implicit wait
 		utility.waitForPageToLoad(driver);
 
@@ -128,7 +140,7 @@ public class verifyNumberOfTrainsTest extends baseClass
 
 		//fetching the total number of trains
 		List<WebElement> trains = driver.findElements(By.xpath("//div[@class=\"form-group no-pad col-xs-12 bull-back border-all\"]"));
-		
+
 		//displaying the total number of trains on the console
 		System.out.println("Total "+trains.size()+" trains are found running betwwen bhubaneswar and bengaluru");
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.pathnxt.restassuredwithoutBDD.GetaSingleUserTest"/>
+      <class name="com.pathnxt.restassuredwithoutBDD.UpdateUserTest"/>
+      <class name="com.pathnxt.restassuredwithoutBDD.CreateAUserUsinhHashMapTest"/>
+      <class name="com.pathnxt.restassuredwithoutBDD.CreateAUserUsingJsonFileTest"/>
+      <class name="com.pathnxt.restassuredwithoutBDD.DeleteAUserTest"/>
+      <class name="com.pathnxt.restassuredwithoutBDD.CreateAUserUsingJsonObjectTest"/>
+      <class name="com.pathnxt.restassuredwithoutBDD.GetAllUsersTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
